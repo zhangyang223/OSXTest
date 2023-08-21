@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: brew install xcode
+        run: brew install xcodes
 
       - name: Build project
         run: xcodebuild -project _Room/xcode/PROTOTYPE.xcodeproj -scheme MyScheme -configuration Release build
