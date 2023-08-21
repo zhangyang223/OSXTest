@@ -22,7 +22,7 @@ jobs:
         run: env
 
       - name: Print GITHUB_WORKSPACE
-        run: echo ${{GITHUB_WORKSPACE}}
+        run: echo ${{ GITHUB_WORKSPACE }}
         
       - name: Create artifact
         uses: actions/upload-artifact@v3
