@@ -16,4 +16,4 @@ jobs:
         run: brew install xcodes
 
       - name: Build project
-        run: xcodebuild -project _Room/xcode/PROTOTYPE.xcodeproj -scheme MyScheme -configuration Release build
+        run: xcodebuild -project _Room/xcode/PROTOTYPE.xcodeproj -configuration Release build
