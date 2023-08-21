@@ -17,3 +17,9 @@ jobs:
 
       - name: Build project
         run: xcodebuild -project _Room/xcode/PROTOTYPE.xcodeproj -configuration Release build
+      
+      - name: Create artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: /Users/runner/work/OSXTest/OSXTest/_Room/xcode/build/Release/PROTOTYPE.app
