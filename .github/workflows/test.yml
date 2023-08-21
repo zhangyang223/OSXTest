@@ -20,9 +20,12 @@ jobs:
 
       - name: Print environment variables
         run: env
+
+      - name: Print GITHUB_WORKSPACE
+        run: echo ${{GITHUB_WORKSPACE}}
         
       - name: Create artifact
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: /Users/runner/work/OSXTest/OSXTest/_Room/xcode/build/Release/PROTOTYPE.app
+          path: _Room/xcode/build/Release/PROTOTYPE.app
