@@ -12,6 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 #      - uses: actions/setup-homebrew@v2
+
+      - name: Print current limit
+        run: ulimit -n
+
       - name: Install dependencies
         run: brew install xcodes composer npm node bower
 #        run: brew install xcodes
@@ -21,9 +25,6 @@ jobs:
 
       - name: Print environment variables
         run: env
-
-      - name: Print current limit
-        run: ulimit -n
 
       - name: Print GITHUB_WORKSPACE
         run: echo ${{ env.GITHUB_WORKSPACE }}
