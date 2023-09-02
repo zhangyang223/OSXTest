@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-homebrew@v2
+#      - uses: actions/setup-homebrew@v2
       - name: Install dependencies
         run: brew install xcode composer npm node bower
 #        run: brew install xcodes
