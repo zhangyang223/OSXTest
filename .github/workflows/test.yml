@@ -29,11 +29,12 @@ jobs:
       - name: Print GITHUB_WORKSPACE
         run: echo ${{ env.GITHUB_WORKSPACE }}
 
-      - name: Create package
+      - name: Create and install package 
         run: |
           app_path=_Room/xcode/build/Release/PROTOTYPE.app
           package_path=Axle2023.pkg
-          pkgbuild --root $app_path --identifier com.ai.axle --version 1.0.0 $package_path        
+          pkgbuild --root $app_path --identifier com.ai.axle --version 1.0.0 $package_path    
+          installer -pkg $package_path -target / 
           
       - name: Create artifact
         uses: actions/upload-artifact@v3
