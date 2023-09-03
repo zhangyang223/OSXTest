@@ -33,8 +33,9 @@ jobs:
         run: |
           app_path=_Room/xcode/build/Release/PROTOTYPE.app
           package_path=Axle2023.pkg
-          pkgbuild --root $app_path --identifier com.ai.axle --version 1.0.0 $package_path    
-          sudo installer -pkg $package_path -target / 
+          pkgbuild --root $app_path --identifier com.ai.axle --version 1.0.0 $package_path   
+          mkdir TestInstallDir
+          sudo installer -pkg $package_path -target TestInstallDir
           
       - name: Create artifact
         uses: actions/upload-artifact@v3
